@@ -4,9 +4,7 @@
 PlaneSprite::PlaneSprite()
 {
 	TheTextureManager::Instance()->loadSpriteSheet(
-		"../Assets/sprites/atlas.txt",
-		"../Assets/sprites/atlas.png", 
-		"spritesheet");
+		"../Assets/sprites/spider03.png, spritesheet");
 
 	m_pSpriteSheet = TheTextureManager::Instance()->getSpriteSheet("spritesheet");
 
@@ -34,9 +32,9 @@ void PlaneSprite::draw()
 	const auto x = getTransform()->position.x;
 	const auto y = getTransform()->position.y;
 
-	// draw the plane sprite with simple propeller animation
+	// drawing spider animation
 	TheTextureManager::Instance()->playAnimation(
-		"spritesheet", m_pAnimations["plane"],
+		"spritesheet", m_pAnimations["spider"],
 		x, y, 0.5f, 0, 255, true);
 }
 
@@ -57,12 +55,12 @@ void PlaneSprite::m_buildAnimations()
 {
 	Animation planeAnimation = Animation();
 
-	planeAnimation.name = "plane";
-	planeAnimation.frames.push_back(m_pSpriteSheet->getFrame("plane1"));
-	planeAnimation.frames.push_back(m_pSpriteSheet->getFrame("plane2"));
-	planeAnimation.frames.push_back(m_pSpriteSheet->getFrame("plane3"));
+	planeAnimation.name = "spider";
+	planeAnimation.frames.push_back(m_pSpriteSheet->getFrame("spider03-idle"));
+	planeAnimation.frames.push_back(m_pSpriteSheet->getFrame("spider03-move2"));
+	planeAnimation.frames.push_back(m_pSpriteSheet->getFrame("spidr03-move3"));
 
-	m_pAnimations["plane"] = planeAnimation;
+	m_pAnimations["spider"] = planeAnimation;
 }
 
 

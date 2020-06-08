@@ -22,12 +22,17 @@ void PlayScene::update()
 
 void PlayScene::clean()
 {
+	delete m_pPlaysceneSprite;
+	m_pPlaysceneSprite = nullptr;
+
+	delete m_pPlaysceneSprite;
+	m_pNextButton = nullptr;
+
 	delete m_pBackButton;
 	m_pBackButton = nullptr;
 
 	delete m_pNextButton;
 	m_pNextButton = nullptr;
-
 	
 	removeAllChildren();
 }
@@ -112,6 +117,12 @@ void PlayScene::handleEvents()
 
 void PlayScene::start()
 {
+	// PlayScene
+
+	m_pPlaysceneSprite = new PlaysceneSprite();
+	m_pPlaysceneSprite->getTransform()->position = glm::vec2(400.0f, 300.0f);
+	addChild(m_pPlaysceneSprite);
+
 	// Plane Sprite
 	m_pPlaneSprite = new PlaneSprite();
 	addChild(m_pPlaneSprite);

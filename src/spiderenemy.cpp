@@ -1,4 +1,4 @@
-#include "ship.h"
+#include "spiderenemy.h"
 #include "glm/gtx/string_cast.hpp"
 #include "PlayScene.h"
 #include "TextureManager.h"
@@ -6,9 +6,9 @@
 
 Ship::Ship() : m_maxSpeed(10.0f)
 {
-	TheTextureManager::Instance()->load("../Assets/textures/ship3.png","ship");
+	TheTextureManager::Instance()->load("../Assets/textures/spider03-idle.png","spider");
 
-	auto size = TheTextureManager::Instance()->getTextureSize("ship");
+	auto size = TheTextureManager::Instance()->getTextureSize("spider");
 	setWidth(size.x);
 	setHeight(size.y);
 

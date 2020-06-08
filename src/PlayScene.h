@@ -3,7 +3,7 @@
 #define __LEVEL1_SCENE__
 
 #include "Scene.h"
-
+#include "PlaysceneSprite.h"
 #include "PlaneSprite.h"
 #include "Player.h"
 
@@ -28,6 +28,7 @@ private:
 
 	PlaneSprite* m_pPlaneSprite;
 	Player* m_pPlayer;
+	PlaysceneSprite* m_pPlaysceneSprite;
 	bool m_playerFacingRight;
 
 	Button* m_pBackButton;

@@ -168,9 +168,10 @@
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\PlaneSprite.cpp" />
     <ClCompile Include="..\src\Player.cpp" />
+    <ClCompile Include="..\src\PlaysceneSprite.cpp" />
     <ClCompile Include="..\src\Renderer.cpp" />
     <ClCompile Include="..\src\Scene.cpp" />
-    <ClCompile Include="..\src\ship.cpp" />
+    <ClCompile Include="..\src\spiderenemy.cpp" />
     <ClCompile Include="..\src\SoundManager.cpp" />
     <ClCompile Include="..\src\EventManager.cpp" />
     <ClCompile Include="..\src\SpriteSheet.cpp" />
@@ -202,12 +203,13 @@
     <ClInclude Include="..\src\PlaneSprite.h" />
     <ClInclude Include="..\src\Player.h" />
     <ClInclude Include="..\src\PlayerAnimationState.h" />
+    <ClInclude Include="..\src\PlaysceneSprite.h" />
     <ClInclude Include="..\src\Renderer.h" />
     <ClInclude Include="..\src\RigidBody.h" />
     <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\SceneState.h" />
     <ClInclude Include="..\src\ShapeType.h" />
-    <ClInclude Include="..\src\ship.h" />
+    <ClInclude Include="..\src\spiderenemy.h" />
     <ClInclude Include="..\src\SoundManager.h" />
     <ClInclude Include="..\src\SpriteSheet.h" />
     <ClInclude Include="..\src\StartScene.h" />
@@ -219,6 +221,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\T163 Coding Standard.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\sprites\magewalkingposes.png" />
+    <Image Include="..\Assets\sprites\spider03.png" />
+    <Image Include="..\Assets\textures\mageidle.png" />
+    <Image Include="..\Assets\textures\magewalking-1.png" />
+    <Image Include="..\Assets\textures\magewalking-2.png" />
+    <Image Include="..\Assets\textures\magewalking-3.png" />
+    <Image Include="..\Assets\textures\magewalking-4.png" />
+    <Image Include="..\Assets\textures\MapPlayscene.png" />
+    <Image Include="..\Assets\textures\spider03-idle.png" />
+    <Image Include="..\Assets\textures\spider03-move2.png" />
+    <Image Include="..\Assets\textures\spider03-move3.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,8 +4,8 @@
 Player::Player(): m_currentAnimationState(PLAYER_IDLE_RIGHT)
 {
 	TheTextureManager::Instance()->loadSpriteSheet(
-		"../Assets/sprites/atlas.txt",
-		"../Assets/sprites/atlas.png", 
+		
+		"../Assets/sprites/magewalkingposes.png", 
 		"spritesheet");
 
 	m_pSpriteSheet = TheTextureManager::Instance()->getSpriteSheet("spritesheet");
@@ -81,22 +81,19 @@ void Player::setAnimation(const Animation& animation)
 void Player::m_buildAnimations()
 {
 	Animation idleAnimation = Animation();
-
+	//put only 1 idle aniamtion
 	idleAnimation.name = "idle";
-	idleAnimation.frames.push_back(m_pSpriteSheet->getFrame("megaman-idle-0"));
-	idleAnimation.frames.push_back(m_pSpriteSheet->getFrame("megaman-idle-1"));
-	idleAnimation.frames.push_back(m_pSpriteSheet->getFrame("megaman-idle-2"));
-	idleAnimation.frames.push_back(m_pSpriteSheet->getFrame("megaman-idle-3"));
-
+	idleAnimation.frames.push_back(m_pSpriteSheet->getFrame("mageidle"));
+	
 	m_pAnimations["idle"] = idleAnimation;
 
 	Animation runAnimation = Animation();
-
+	//created walk animation
 	runAnimation.name = "run";
-	runAnimation.frames.push_back(m_pSpriteSheet->getFrame("megaman-run-0"));
-	runAnimation.frames.push_back(m_pSpriteSheet->getFrame("megaman-run-1"));
-	runAnimation.frames.push_back(m_pSpriteSheet->getFrame("megaman-run-2"));
-	runAnimation.frames.push_back(m_pSpriteSheet->getFrame("megaman-run-3"));
+	runAnimation.frames.push_back(m_pSpriteSheet->getFrame("magewalking-1"));
+	runAnimation.frames.push_back(m_pSpriteSheet->getFrame("magewalking-2"));
+	runAnimation.frames.push_back(m_pSpriteSheet->getFrame("magewalking-3"));
+	runAnimation.frames.push_back(m_pSpriteSheet->getFrame("magewalking-4"));
 
 	m_pAnimations["run"] = runAnimation;
 }

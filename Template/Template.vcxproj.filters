@@ -33,6 +33,9 @@
     <Filter Include="gbcTeamPerks">
       <UniqueIdentifier>{3b515766-bc38-4072-ba20-302d298437b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Images Used">
+      <UniqueIdentifier>{f4a26087-9e24-48f9-a39a-dc6d8411cba4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp">
@@ -86,9 +89,6 @@
     <ClCompile Include="..\src\Label.cpp">
       <Filter>UI Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ship.cpp">
-      <Filter>Game Objects</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Target.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
@@ -105,6 +105,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\TitleSprite.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PlaysceneSprite.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spiderenemy.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
   </ItemGroup>
@@ -184,9 +190,6 @@
     <ClInclude Include="..\src\Label.h">
       <Filter>UI Objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ship.h">
-      <Filter>Game Objects</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Target.h">
       <Filter>Game Objects</Filter>
     </ClInclude>
@@ -214,10 +217,51 @@
     <ClInclude Include="..\src\TitleSprite.h">
       <Filter>Game Objects</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\PlaysceneSprite.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\spiderenemy.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\T163 Coding Standard.pdf">
       <Filter>gbcTeamPerks</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\textures\MapPlayscene.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\textures\magewalking-4.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\textures\mageidle.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\textures\magewalking-1.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\textures\magewalking-2.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\textures\magewalking-3.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\sprites\magewalkingposes.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\sprites\spider03.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\textures\spider03-idle.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\textures\spider03-move2.png">
+      <Filter>Images Used</Filter>
+    </Image>
+    <Image Include="..\Assets\textures\spider03-move3.png">
+      <Filter>Images Used</Filter>
+    </Image>
   </ItemGroup>
 </Project>
