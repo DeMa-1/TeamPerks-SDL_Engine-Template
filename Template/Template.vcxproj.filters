@@ -119,9 +119,6 @@
     <ClCompile Include="..\src\VictorVanHelsing.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\BossOne.cpp">
-      <Filter>Game Objects</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Fireball.cpp">
       <Filter>Abilities</Filter>
     </ClCompile>
@@ -133,6 +130,9 @@
     </ClCompile>
     <ClCompile Include="..\src\MathManager.cpp">
       <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MotherSpider.cpp">
+      <Filter>Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Tile.cpp">
       <Filter>Source Files</Filter>
@@ -148,6 +148,21 @@
     </ClCompile>
     <ClCompile Include="..\src\DebugManager.cpp">
       <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ExplosiveSpider.cpp">
+      <Filter>Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Enemy.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\EnemyWizard.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Orb.cpp">
+      <Filter>Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Barrel.cpp">
+      <Filter>Game Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -262,9 +277,6 @@
     <ClInclude Include="..\src\VictorVanHelsing.h">
       <Filter>Game Objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\BossOne.h">
-      <Filter>Game Objects</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\BossOneAnimationState.h">
       <Filter>Enums</Filter>
     </ClInclude>
@@ -283,6 +295,12 @@
     <ClInclude Include="..\src\Ability.h">
       <Filter>Abilities</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\MotherSpider.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ExplosiveSpider.h">
+      <Filter>Abilities</Filter>
+    </ClInclude>
     <ClInclude Include="..\src\Tile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -297,6 +315,18 @@
     </ClInclude>
     <ClInclude Include="..\src\DebugManager.h">
       <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Enemy.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\EnemyWizard.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Orb.h">
+      <Filter>Abilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Barrel.h">
+      <Filter>Game Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -347,6 +377,18 @@
     <Image Include="..\Assets\sprites\victorvanhelsing.png">
       <Filter>Sprites</Filter>
     </Image>
+    <Image Include="..\Assets\sprites\spiderBig.png">
+      <Filter>Sprites</Filter>
+    </Image>
+    <Image Include="..\Assets\sprites\spiderExplode.png">
+      <Filter>Sprites</Filter>
+    </Image>
+    <Image Include="..\Assets\sprites\explosionSpider.png">
+      <Filter>Sprites</Filter>
+    </Image>
+    <Image Include="..\Assets\sprites\Items_BlueGem.png">
+      <Filter>Sprites</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Assets\sprites\atlas.txt">
@@ -359,6 +401,9 @@
       <Filter>Sprites</Filter>
     </Text>
     <Text Include="..\Assets\sprites\victorvanhelsing.txt">
+      <Filter>Sprites</Filter>
+    </Text>
+    <Text Include="..\Assets\sprites\BlueGem.txt">
       <Filter>Sprites</Filter>
     </Text>
   </ItemGroup>

@@ -3,7 +3,7 @@
 #include "CollisionManager.h"
 #include "EventManager.h"
 #include "MathManager.h"
-
+#include "Sword.h"
 
 VictorVanHelsing::VictorVanHelsing() : m_currentAnimationState(VICTOR_WALK_UP)
 {
@@ -20,10 +20,11 @@ VictorVanHelsing::VictorVanHelsing() : m_currentAnimationState(VICTOR_WALK_UP)
 	// set frame height
 	setHeight(60);
 
-	getTransform()->position = glm::vec2(400.0f, 200.0f);
+	getTransform()->position = glm::vec2(390.0f, 400.0f);
 	getRigidBody()->velocity = glm::vec2(0.0f, 0.0f);
 	getRigidBody()->acceleration = glm::vec2(0.0f, 0.0f);
 	getRigidBody()->isColliding = false;
+	addAbility(new Sword());
 	setType(VICTOR);
 
 	m_buildAnimations();
@@ -99,27 +100,7 @@ void VictorVanHelsing::useCurrentAbility()
 	{
 		m_pListAbilities.front()->execute(getTransform()->position, getAngle());
 	}
-	
-	/*if (m_pListAbilities.size() > 0 && m_abilityReady) {
-		switch (m_currentAnimationState)
-		{
-		case VICTOR_WALK_RIGHT:
-			m_pListAbilities.front()->execute(getTransform()->position, 0);
-			break;
-		case VICTOR_WALK_LEFT:
-			m_pListAbilities.front()->execute(getTransform()->position, 180);
-			break;
-		case VICTOR_WALK_UP:
-			m_pListAbilities.front()->execute(getTransform()->position, -90);
-			break;
-		case VICTOR_WALK_DOWN:
-			m_pListAbilities.front()->execute(getTransform()->position, 90);
-			break;
-		default:
-			m_pListAbilities.front()->execute(getTransform()->position, -90);
-			break;
-		}
-	}*/
+
 }
 
 void VictorVanHelsing::changeAbility()

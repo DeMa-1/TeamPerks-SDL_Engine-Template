@@ -157,12 +157,15 @@
   <ItemGroup>
     <ClCompile Include="..\src\Ability.cpp" />
     <ClCompile Include="..\src\BackgroundEndS.cpp" />
-    <ClCompile Include="..\src\BossOne.cpp" />
+    <ClCompile Include="..\src\Barrel.cpp" />
+    <ClCompile Include="..\src\Enemy.cpp" />
     <ClCompile Include="..\src\Button.cpp" />
     <ClCompile Include="..\src\CollisionManager.cpp" />
     <ClCompile Include="..\src\DebugManager.cpp" />
     <ClCompile Include="..\src\DisplayObject.cpp" />
     <ClCompile Include="..\src\EndScene.cpp" />
+    <ClCompile Include="..\src\EnemyWizard.cpp" />
+    <ClCompile Include="..\src\ExplosiveSpider.cpp" />
     <ClCompile Include="..\src\Fireball.cpp" />
     <ClCompile Include="..\src\FontManager.cpp" />
     <ClCompile Include="..\src\Game.cpp" />
@@ -171,6 +174,8 @@
     <ClCompile Include="..\src\Label.cpp" />
     <ClCompile Include="..\src\LevelManager.cpp" />
     <ClCompile Include="..\src\MathManager.cpp" />
+    <ClCompile Include="..\src\MotherSpider.cpp" />
+    <ClCompile Include="..\src\Orb.cpp" />
     <ClCompile Include="..\src\Pathing.cpp" />
     <ClCompile Include="..\src\PathManager.cpp" />
     <ClCompile Include="..\src\PlayScene.cpp" />
@@ -196,7 +201,8 @@
     <ClInclude Include="..\src\Ability.h" />
     <ClInclude Include="..\src\Animation.h" />
     <ClInclude Include="..\src\BackgroundEndS.h" />
-    <ClInclude Include="..\src\BossOne.h" />
+    <ClInclude Include="..\src\Barrel.h" />
+    <ClInclude Include="..\src\Enemy.h" />
     <ClInclude Include="..\src\BossOneAnimationState.h" />
     <ClInclude Include="..\src\Button.h" />
     <ClInclude Include="..\src\CollisionManager.h" />
@@ -205,8 +211,10 @@
     <ClInclude Include="..\src\DebugManager.h" />
     <ClInclude Include="..\src\DisplayObject.h" />
     <ClInclude Include="..\src\EndScene.h" />
+    <ClInclude Include="..\src\EnemyWizard.h" />
     <ClInclude Include="..\src\Event.h" />
     <ClInclude Include="..\src\EventManager.h" />
+    <ClInclude Include="..\src\ExplosiveSpider.h" />
     <ClInclude Include="..\src\Fireball.h" />
     <ClInclude Include="..\src\FontManager.h" />
     <ClInclude Include="..\src\Frame.h" />
@@ -217,7 +225,9 @@
     <ClInclude Include="..\src\Label.h" />
     <ClInclude Include="..\src\LevelManager.h" />
     <ClInclude Include="..\src\MathManager.h" />
+    <ClInclude Include="..\src\MotherSpider.h" />
     <ClInclude Include="..\src\MouseButtons.h" />
+    <ClInclude Include="..\src\Orb.h" />
     <ClInclude Include="..\src\Pathing.h" />
     <ClInclude Include="..\src\PathManager.h" />
     <ClInclude Include="..\src\PlayScene.h" />
@@ -255,15 +265,20 @@
     <Image Include="..\Assets\sprites\atlas2.png" />
     <Image Include="..\Assets\sprites\background.png" />
     <Image Include="..\Assets\sprites\Endsheet.png" />
+    <Image Include="..\Assets\sprites\explosionSpider.png" />
     <Image Include="..\Assets\sprites\foreground.png" />
+    <Image Include="..\Assets\sprites\Items_BlueGem.png" />
     <Image Include="..\Assets\sprites\magicenemy-projectile.png" />
     <Image Include="..\Assets\sprites\magicenemy.png" />
     <Image Include="..\Assets\sprites\megaman-idle.png" />
     <Image Include="..\Assets\sprites\megaman-run.png" />
+    <Image Include="..\Assets\sprites\spiderBig.png" />
+    <Image Include="..\Assets\sprites\spiderExplode.png" />
     <Image Include="..\Assets\sprites\victorvanhelsing.png" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Assets\sprites\atlas.txt" />
+    <Text Include="..\Assets\sprites\BlueGem.txt" />
     <Text Include="..\Assets\sprites\Endsheet.txt" />
     <Text Include="..\Assets\sprites\magicenemy.txt" />
     <Text Include="..\Assets\sprites\victorvanhelsing.txt" />
