@@ -1,0 +1,12 @@
+rat_up1 0 0 31 31
+rat_up2 62 0 31 31
+rat_up3 93 0 31 31
+rat_right1 0 40 32 64
+rat_right2 96 40 32 64
+rat_right3 192 40 32 64
+rat_down1 0 66 32 64
+rat_down2 96 66 32 64
+rat_down3 192 66 32 64
+rat_left1 0 105 32 64
+rat_left2 96 105 32 64
+rat_left3 192 105 32 64
