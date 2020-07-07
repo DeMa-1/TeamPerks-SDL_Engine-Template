@@ -21,7 +21,6 @@ public:
 	void animation();
 	void pickable(glm::vec2 position) ;
 
-	Fireball* getAbility() override { return new Fireball(); }
 private:
 
 	bool m_running = false;

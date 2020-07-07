@@ -1,0 +1,5 @@
+Barrels_idle1 0 0 90 64
+Barrels_idle2 64 0 90 64
+Barrles_idle3 128 0 90 64
+Barrels_idle4 192  0 90 64
+Barrels_fellover1 255 0 70 64

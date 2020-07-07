@@ -4,10 +4,8 @@
 #include "EventManager.h"
 #include "MathManager.h"
 #include "Sword.h"
-#include "LifeBar.h"
-#include "Needle.h"
 
-VictorVanHelsing::VictorVanHelsing(glm::vec2 pos) : m_currentAnimationState(VICTOR_WALK_UP)
+VictorVanHelsing::VictorVanHelsing() : m_currentAnimationState(VICTOR_WALK_UP)
 {
 	TheTextureManager::Instance()->loadSpriteSheet(
 		"../Assets/sprites/victorvanhelsing.txt",
@@ -22,7 +20,7 @@ VictorVanHelsing::VictorVanHelsing(glm::vec2 pos) : m_currentAnimationState(VICT
 	// set frame height
 	setHeight(60);
 
-	getTransform()->position = pos;
+	getTransform()->position = glm::vec2(390.0f, 400.0f);
 	getRigidBody()->velocity = glm::vec2(0.0f, 0.0f);
 	getRigidBody()->acceleration = glm::vec2(0.0f, 0.0f);
 	getRigidBody()->isColliding = false;
@@ -31,9 +29,6 @@ VictorVanHelsing::VictorVanHelsing(glm::vec2 pos) : m_currentAnimationState(VICT
 
 	m_buildAnimations();
 	m_pObject = this;
-
-	UIList.push_back(new LifeBar());
-	UIList.push_back(new Needle());
 }
 
 VictorVanHelsing::~VictorVanHelsing()
@@ -48,41 +43,29 @@ void VictorVanHelsing::draw()
 	switch (m_currentAnimationState)
 	{
 	case VICTOR_WALK_RIGHT:
-		right = true;
 		TheTextureManager::Instance()->playAnimation("victorvanhelsing", m_pAnimations["walkright"],
 			x, y, 0.12f, 0, 255, true);
 		break;
 	case VICTOR_WALK_LEFT:
-		right = false;
 		TheTextureManager::Instance()->playAnimation("victorvanhelsing", m_pAnimations["walkright"],
 			x, y, 0.12f, 0, 255, true, SDL_FLIP_HORIZONTAL);
 		break;
 	case VICTOR_WALK_UP:
-		down = false;
 		TheTextureManager::Instance()->playAnimation("victorvanhelsing", m_pAnimations["walkup"],
 			x, y, 0.25f, 0, 255, true);
 		break;
 	case VICTOR_WALK_DOWN:
-		down = true;
 		TheTextureManager::Instance()->playAnimation("victorvanhelsing", m_pAnimations["walkdown"],
 			x, y, 0.25f, 0, 255, true);
 		break;
 	default:
 		break;
 	}
-	for (auto s : UIList)
-	{
-		s->draw();
-	}
 }
 
 void VictorVanHelsing::update()
 {
 	GameObject::m_BoundsRestrict();
-	for (auto s : UIList)
-	{
-		s->update(this);
-	}
 }
 
 void VictorVanHelsing::clean()
@@ -110,23 +93,12 @@ void VictorVanHelsing::deleteAbility()
 	m_pListAbilities.erase(m_pListAbilities.begin()); //delete the first ability added.
 }
 
-void VictorVanHelsing::useCurrentAbility(int player)
+void VictorVanHelsing::useCurrentAbility()
 {
-	if (player == 1) 
+	setAngle(MAMA::AngleBetweenPoints(getTransform()->position, EventManager::Instance().getMousePosition()));
+	if (m_pListAbilities.size() > 0) 
 	{
-		setAngle(MAMA::AngleBetweenPoints(getTransform()->position, EventManager::Instance().getMousePosition()));
-		if (m_pListAbilities.size() > 0) 
-		{
-			m_pListAbilities.front()->execute(getTransform()->position, getAngle());
-		}
-	}
-	if (player == 2)
-	{
-		if (m_pListAbilities.size() > 0)
-		{
-			setAngle(MAMA::AngleBetweenPoints(getTransform()->position, EventManager::Instance().getGameController(0)->getLeftJoystickPosition()));
-			m_pListAbilities.front()->execute(getTransform()->position, getAngle());
-		}
+		m_pListAbilities.front()->execute(getTransform()->position, getAngle());
 	}
 
 }

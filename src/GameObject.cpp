@@ -7,7 +7,6 @@ GameObject::GameObject():
 	m_width(0), m_height(0), m_type(NONE)
 {
 	m_currentObject = this;
-	
 }
 
 GameObject::~GameObject()
@@ -43,11 +42,6 @@ GameObjectType GameObject::getType() const
 	return m_type;
 }
 
-GameObjectType GameObject::getParentType() const
-{
-	return m_parent;
-}
-
 void GameObject::setWidth(const int new_width)
 {
 	m_width = new_width;
@@ -66,11 +60,6 @@ void GameObject::setAngle(int new_angle)
 void GameObject::setType(const GameObjectType new_type)
 {
 	m_type = new_type;
-}
-
-void GameObject::setParentType(const GameObjectType new_type)
-{
-	m_parent = new_type;
 }
 
 //boundry restrict
@@ -126,11 +115,4 @@ bool GameObject::m_CheckBounds()
 		return true;
 	}
 	return false;
-}
-
-int& GameObject::getLife()
-{
-	
-	*GameObject::m_pLife = 100;
-	return* m_pLife;
 }

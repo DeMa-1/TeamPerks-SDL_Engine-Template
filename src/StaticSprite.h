@@ -9,6 +9,7 @@ private:
 	std::string name;
 public:
 	StaticSprite(std::string spritePath, std::string name, float posX, float posY);
+	StaticSprite();
 	~StaticSprite();
 
 	// Life Cycle Functions

@@ -13,7 +13,6 @@ ExplosiveSpider::ExplosiveSpider()
 	//getTransform()->position = glm::vec2(100.0f, 100.0f);
 
 	setType(PROJECTILE);
-	
 }
 ExplosiveSpider::ExplosiveSpider(glm::vec2 position, bool running, int angle, bool pickeable)
 {
@@ -174,24 +173,6 @@ void ExplosiveSpider::animation()
 }
 void ExplosiveSpider::m_buildAnimations()
 {
-
-	if (m_angle >= -45 && m_angle < 45)
-	{
-		m_currentAnimationState = PLAYER_RUN_RIGHT;
-	}
-	else if(m_angle >= 45 && m_angle < 135)
-	{
-		m_currentAnimationState = PLAYER_RUN_DOWN;
-	}
-	else if (m_angle >= 135 || m_angle < -135)
-	{
-		m_currentAnimationState = PLAYER_RUN_LEFT;
-	}
-	else if (m_angle >= -135 && m_angle < -45)
-	{
-		m_currentAnimationState = PLAYER_RUN_UP;
-	}
-	
 	Animation runupAnimation = Animation();
 
 	runupAnimation.name = "run_up";

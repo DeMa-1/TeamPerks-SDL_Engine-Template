@@ -14,6 +14,10 @@ StaticSprite::StaticSprite(std::string spritePath, std::string name, float posX,
 
 }
 
+StaticSprite::StaticSprite()
+{
+}
+
 StaticSprite::~StaticSprite()
 {
 }

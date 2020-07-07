@@ -9,10 +9,11 @@
 #include "Target.h"
 #include "Button.h"
 #include "StaticSprite.h"
-#include "VictorVanHelsing.h"
 #include "GameObjectType.h"
 #include "Game.h"
 #include "EventManager.h"
+#include "VictorVanHelsing.h"
+#include "PoisonSpider.h"
 #include "Enemy.h"
 #include "Fireball.h"
 #include "Sword.h"
@@ -36,13 +37,12 @@ public:
 
 	bool m_bgScrollX = false, m_bgScrollY = false;
 	float playerSpeed = 2.0f;
-
-
 	
 private:
 	glm::vec2 m_mousePosition;
-	std::vector<VictorVanHelsing*> listPlayers;
+
 	StaticSprite* m_pBkg{};
+	std::vector<VictorVanHelsing*> listPlayers;
 	int m_currentTime = 0;
 	int m_prevTime = 0;
 

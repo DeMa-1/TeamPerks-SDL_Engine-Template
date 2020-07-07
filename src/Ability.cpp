@@ -2,7 +2,6 @@
 
 Ability::Ability()
 {
-	setParentType(ABILITY);
 }
 
 Ability::~Ability()
