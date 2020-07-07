@@ -20,7 +20,6 @@ public:
 	virtual void pickable(glm::vec2 position) = 0;
 
 	bool& getAbilityDone() { return m_abilityDone; }
-	virtual Ability* getAbility() = 0;
 	
 protected:
 	bool m_abilityDone = false;

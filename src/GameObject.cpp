@@ -42,11 +42,6 @@ GameObjectType GameObject::getType() const
 	return m_type;
 }
 
-GameObjectType GameObject::getParentType() const
-{
-	return m_parent;
-}
-
 void GameObject::setWidth(const int new_width)
 {
 	m_width = new_width;
@@ -65,11 +60,6 @@ void GameObject::setAngle(int new_angle)
 void GameObject::setType(const GameObjectType new_type)
 {
 	m_type = new_type;
-}
-
-void GameObject::setParentType(const GameObjectType new_type)
-{
-	m_parent = new_type;
 }
 
 //boundry restrict

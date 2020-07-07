@@ -18,8 +18,6 @@ public:
 	void animation();
 	void pickable(glm::vec2 position);
 
-	ExplosiveSpider* getAbility() override { return new ExplosiveSpider();}
-
 private:
 
 	//animation variables

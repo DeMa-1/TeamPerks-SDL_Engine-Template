@@ -18,8 +18,6 @@ public:
 	void animation();
 	void pickable(glm::vec2 position);
 
-	Orb* getAbility() override { return new Orb(); }
-
 private:
 
 	//animation variables
