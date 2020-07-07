@@ -1,10 +1,5 @@
 #include "Barrel.h"
-#include "SpriteSheet.h"
-#include "Animation.h"
-#include <map>
-#include "TextureManager.h"
-#include "StaticSprite.h"
-#include "GameObject.h"
+
 
 Barrel::Barrel()
 {
@@ -47,9 +42,13 @@ void Barrel::update()
 		int randomNum = rand() % 2;
 		if (randomNum == 0)
 		{
-			m_currentAnimationState = ABILITY_UP;
+			m_currentAnimationState = IDLE_1;
 		}
-		
+		else if (randomNum == 1)
+		{
+			m_currentAnimationState = IDLE_2;
+			
+		}
 		//m_currentAnimationState = static_cast<PlayerAnimationState>(rand() % 8); //num of animation states
 
 		tempCounter = 0;
@@ -61,9 +60,6 @@ void Barrel::clean()
 {
 }
 
-void Barrel::setAnimation(const Animation& animation)
-{
-}
 
 void Barrel::m_buildAnimations()
 {
@@ -86,4 +82,22 @@ void Barrel::m_buildAnimations()
 
 void Barrel::Animate()
 {
+	// alias for x and y
+	const auto x = getTransform()->position.x;
+	const auto y = getTransform()->position.y;
+	float animationVelocity = 0.50f;
+	// draw the player according to animation state
+	switch (m_currentAnimationState)
+	{
+	case IDLE_1:
+		TheTextureManager::Instance()->playAnimation("Barrels", m_pAnimations["barrels_up"],
+			x, y, animationVelocity, 0, 255, true);
+		break;
+	case IDLE_2:
+		TheTextureManager::Instance()->playAnimation("Barrels", m_pAnimations["barrels_fall"],
+			x, y, animationVelocity, 0, 255, true);
+		break;
+	default:
+		break;
+	}
 }

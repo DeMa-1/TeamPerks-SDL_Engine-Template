@@ -1,10 +1,14 @@
 #pragma once
+#include "SpriteSheet.h"
+#include "TextureManager.h"
+#include "StaticSprite.h"
+#include "GameObject.h"
 #include "DisplayObject.h"
 #include "Animation.h"
+#include <map>
+#include "DisplayObject.h"
 #include "PlayerAnimationState.h"
-#include <unordered_map>
 #include "SpriteSheet.h"
-
 class Barrel : Scene
 {
 public:
@@ -15,8 +19,6 @@ public:
 	virtual void draw();
 	virtual void update();
 	virtual void clean();
-
-	void setAnimation(const Animation& animation);
 
 private:
 	void m_buildAnimations();

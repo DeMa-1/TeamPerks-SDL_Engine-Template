@@ -13,6 +13,7 @@
 #include "Game.h"
 #include "EventManager.h"
 #include "VictorVanHelsing.h"
+#include "PoisonSpider.h"
 #include "Enemy.h"
 #include "Fireball.h"
 #include "Sword.h"

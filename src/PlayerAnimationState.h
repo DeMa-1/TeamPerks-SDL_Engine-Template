@@ -11,8 +11,9 @@ enum PlayerAnimationState
 	ABILITY_UP,
 	ABILITY_RIGHT,
 	ABILITY_DOWN,
-	ABILITY_LEFT
-	
+	ABILITY_LEFT,
+	IDLE_1,
+	IDLE_2
 };
 
 #endif /* defined (__PLAYER_ANIMATION_STATE__)*/

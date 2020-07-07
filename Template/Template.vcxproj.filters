@@ -164,6 +164,12 @@
     <ClCompile Include="..\src\Barrel.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\PoisonSpider.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SpiderBite.cpp">
+      <Filter>Abilities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\GameObject.h">
@@ -327,6 +333,12 @@
     </ClInclude>
     <ClInclude Include="..\src\Barrel.h">
       <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PoisonSpider.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SpiderBite.h">
+      <Filter>Abilities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

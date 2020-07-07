@@ -4,6 +4,7 @@
 #include "Config.h"
 #include "LevelManager.h"
 #include "Barrel.h"
+#include "PoisonSpider.h"
 #include "VictorVanHelsing.h"
 #include <fstream>
 #include <string>
@@ -178,7 +179,7 @@ void PlayScene::start()
 	LVLMAN::Instance()->loadTiles("../Assets/sprites/TileTest.png", "tiles", "../Assets/sprites/TileData.txt");
 	LVLMAN::Instance()->loadLevel("../Assets/data/Level1.txt");
 
-	m_pBkg = new StaticSprite("../Assets/sprites/Barrels.png", "Barrels", 400.0f, 300.0f);
+	m_pBkg = new StaticSprite("../Assets/sprites/Barrels.png", "Barrels", 600.0f, 500.0f);
 	addChild(m_pBkg);
 	
 	std::cout << "start";
@@ -193,6 +194,8 @@ void PlayScene::start()
 	//BigSpider
 	addChild(new MotherSpider());
 
+	//PoisonSpider
+	addChild(new PoisonSpider());
 	
 }
 
